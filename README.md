@@ -1,72 +1,91 @@
 # Oyebisi Ayobami
 
-### Solidity & Web3 Protocol Engineer
+### Solidity / DeFi Protocol Engineer — Freelance • Contract • Part-time
 
-I build security-focused smart contracts, DeFi protocols, cross-chain systems, and full-stack Web3 applications.
+I build security-focused smart contracts and protocol infrastructure for systems where mistakes move money: lending markets, redemptions, treasury execution, escrow, cross-chain verification, oracle-bound logic, and zero-knowledge authorization.
 
-My work is centered on **Solidity, Foundry, DeFi protocol architecture, smart-contract testing, oracle integrations, on-chain authorization, and Web3 frontend/backend integration**.
+My strongest stack is **Solidity + Foundry**, with TypeScript/Node.js and React/Next.js when a protocol also needs services, operator tooling, or a usable client. I care about explicit trust boundaries, adversarial testing, reproducible deployments, and documentation that says what is actually verified.
 
-I’m especially interested in systems where correctness matters: lending and liquidation logic, tokenized-asset workflows, cross-chain verification, signature schemes, access control, treasury execution, and other capital-sensitive smart-contract flows.
-
----
-
-## Featured work
-
-### Fair Witness — Trust-Minimized Web3 Treasury
-
-A security-focused execution system where external reasoning can propose actions, but deterministic smart-contract policy remains the final authority over capital movement.
-
-**Highlights:** Solidity/Foundry, cross-chain evidence verification, bounded treasury execution, replay/deadline/slippage/rate-limit protections, adversarial testing, TypeScript infrastructure, React frontend, and public testnet execution evidence.
-
-[View repository](https://github.com/Ay-obami/fair-witness)
-
-### Clearline — RWA Redemption & Custody Attestation
-
-An on-chain redemption pipeline for tokenized real-world assets with finality-aware processing, ERC-3643-style compliance re-checks, 2-of-3 EIP-712 signing, manual-review controls, and on-chain settlement attestations.
-
-**Highlights:** Solidity/Foundry, 44 tests, ~90.6% core-contract line coverage, Next.js frontend, Node.js signer/custodian services, and Blockscout-verified HSK testnet contracts.
-
-[View repository](https://github.com/Ay-obami/Clearline)
-
-### Lending & Borrowing Protocol — Modular DeFi Architecture
-
-A modular Solidity lending protocol supporting supply, withdrawal, collateralized borrowing, repayment, liquidation, reserve-level risk controls, variable interest rates, and Chainlink pricing.
-
-**Highlights:** Solidity, Foundry, Chainlink, modular pool architecture, liquidation logic, interest-rate strategy, unit testing, React, and wagmi integration.
-
-[View repository](https://github.com/Ay-obami/Lending_Borrowing_Protocol)
+**Available for:** smart-contract implementation, DeFi protocol work, contract debugging/refactoring, Foundry test suites, security hardening, deployment/release work, and Web3 integration.
 
 ---
 
-## What I work on
+## Flagship protocol work
 
-- **Smart contracts:** Solidity, EVM architecture, ERC standards, access control, EIP-712 signatures
-- **DeFi:** lending, borrowing, liquidations, staking, vault-style flows, treasury systems, tokenization
-- **Testing & security:** Foundry unit/integration/fuzz/invariant testing, adversarial scenarios, replay protection, authorization boundaries
-- **Oracles & infrastructure:** Chainlink, cross-chain evidence, contract verification, deployment scripts, CI
-- **Web3 integration:** TypeScript, Node.js, React, Next.js, wagmi, viem
-- **Additional protocol work:** Rust, Stellar Soroban, zero-knowledge systems
+### [Modular Lending & Borrowing Protocol](https://github.com/Ay-obami/Lending_Borrowing_Protocol)
+
+A shared-core Solidity lending market supporting supply, withdrawal, collateralized borrowing, repayment, full-debt liquidation, reserve-level risk controls, variable interest, and Chainlink pricing.
+
+**Engineering evidence:** native-token decimal handling, scaled debt/deposit accounting, collateral-lock isolation, directional rounding, stale/incomplete/future oracle checks, exact-receipt guards, fuzz tests, action-sequence invariants, varied-index lifecycle tests, CI, and a React/wagmi client.
 
 ---
 
-## Engineering approach
+### [Clearline — RWA Redemption & Custody Attestation](https://github.com/Ay-obami/Clearline)
 
-I prefer protocol designs with explicit trust boundaries, testable state transitions, and clear operational assumptions. For high-impact actions, I favor deterministic on-chain enforcement over trusting off-chain software to behave correctly.
+An RWA redemption pipeline connecting an on-chain burn/lock event to off-chain asset release through finality checks, redemption-time compliance, threshold EIP-712 authorization, manual-review controls, and on-chain settlement attestations.
 
-Typical workflow:
+**Engineering evidence:** v2 signer/board rotation, deployment-manifest verification, signer/custodian service regressions, local-chain rotation + settlement rehearsal, production frontend build gates, and a historical Blockscout-verified HSK testnet v1 deployment. The repository clearly separates historical v1 evidence from unreleased v2.
 
-`Specification → Architecture → Smart Contracts → Tests → Deployment → Frontend/Backend Integration → Documentation`
+---
+
+### [Fair Witness — Trust-Minimized Execution for Autonomous Financial Agents](https://github.com/Ay-obami/fair-witness)
+
+An autonomous-finance architecture where AI can decide **EXECUTE or WAIT**, but deterministic smart-contract policy remains the authority over treasury capital.
+
+**Engineering evidence:** user-owned treasuries, bounded strategies, replay/rate/slippage controls, cross-chain Attestcoin evidence verification, adversarial test coverage, operator/security documentation, and a controlled public-testnet demonstration using real cross-chain transactions, real proofs, Creditcoin verification, and policy-constrained execution.
+
+Live app: https://fair-witness.vercel.app/
+
+---
+
+### [ShadowEscrow — Private Funded Escrow on Midnight](https://github.com/Ay-obami/shadow-escrow)
+
+A Compact/Midnight escrow where payment terms and lifecycle state are public while the approval credential remains private state.
+
+**Engineering evidence:** Created → Funded → Approved → Settled lifecycle, expiry refund/cancel paths, exact native-asset funding, private witness commitment, replay/deadline guards, account-scoped wallet state, generated ZK artifacts, 38 regression tests, CI, and local end-to-end funded lifecycle verification. Historical Preview v1 evidence is preserved separately from v2.
+
+---
+
+## Additional protocol work
+
+- [CrossOdds](https://github.com/Ay-obami/CrossOdds) — cross-chain protocol work with explicit verification boundaries and documented live-RPC limitations.
+- [Cipher_Mint](https://github.com/Ay-obami/Cipher_Mint) — ZK/Groth16 verification flow with real proof fixtures and negative-path contract tests.
+- [Veil](https://github.com/Ay-obami/veil) — attributed FCC orderbook extension work covering FTSO-aware matching, ZK solvency verification, balance persistence, race testing, and a bounded offline reproducibility path.
+- [Undertow](https://github.com/Ay-obami/Undertow) — Flare/Coston2 lending integration and research branch kept separate from the canonical lending core.
+- [Baseline](https://github.com/Ay-obami/Baseline) — Canton/Daml subscription-credit facility prototype with reproducible Daml tests and DAR build.
+
+---
+
+## What I bring to a protocol team
+
+- **Solidity architecture:** state machines, modular protocols, access control, EIP-712, ERC integrations, custody and settlement flows
+- **DeFi mechanics:** lending/borrowing, liquidations, interest/index accounting, collateral controls, treasury execution, vault-like flows
+- **Testing & security:** Foundry unit/fuzz/invariant testing, adversarial scenarios, replay protection, authorization boundaries, failure-path analysis
+- **Oracles & cross-chain:** Chainlink validation, FTSO-aware logic, proof/evidence verification, finality-aware workflows
+- **Privacy / ZK:** Groth16 verifier integration, Compact/Midnight private witnesses, public/private state boundary design
+- **Delivery:** CI gates, deployment scripts, release runbooks, migration constraints, frontend/backend integration when needed
+
+I prefer protocol designs with explicit assumptions and testable state transitions. For capital-sensitive actions, I favor deterministic on-chain enforcement over trusting off-chain software to behave correctly.
 
 ---
 
 ## Core stack
 
-`Solidity` · `Foundry` · `Ethereum / EVM` · `Chainlink` · `TypeScript` · `Node.js` · `React` · `Next.js` · `wagmi` · `viem` · `Rust / Soroban`
+**Solidity · Foundry · EVM · Chainlink · TypeScript · Node.js · React · Next.js · wagmi · viem · Rust/Soroban · Daml/Canton · Circom/Groth16 · Midnight/Compact**
 
 ---
 
-## Open to work
+## Work with me
 
-I’m available for Web3 projects involving smart-contract development, DeFi protocol engineering, contract debugging/refactoring, testing, deployment, security hardening, and dApp integration.
+I am intentionally open to **freelance, contract, agency-subcontracting, and part-time Web3 work**.
 
-For project discussions, the fastest starting point is a repository, protocol specification, failing test suite, or concise technical scope.
+The fastest way to evaluate fit is to send me one of these:
+
+- a protocol specification that needs implementation;
+- a Solidity repo that needs debugging or hardening;
+- a failing Foundry test suite;
+- a DeFi feature that needs architecture + tests;
+- a deployment/integration problem with a concrete target network.
+
+**Email:** [oyebisiayobami26@gmail.com](mailto:oyebisiayobami26@gmail.com)  
+**GitHub:** [@Ay-obami](https://github.com/Ay-obami)
